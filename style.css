@@ -3,7 +3,6 @@
 body {
   margin: 0%;
   font-family: "Raleway", sans-serif;
-  
 }
 body a {
   text-decoration: none;
@@ -157,6 +156,9 @@ body a {
 }
 .section2 p:hover {
   background: #efe6fb;
+}
+.section2 .fa-mobile-screen-button:active, .section2 .fa-list:active, .section2 .fa-store:active {
+  color: #9356DC;
 }
 
 .section3 {

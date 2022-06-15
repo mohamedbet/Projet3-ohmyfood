@@ -12,6 +12,7 @@ $color5:rgb(192 192 192);
 $color6:rgb(61, 59, 59);
 
 
+
 body{
   margin: 0%;
   font-family: 'Raleway', sans-serif;
@@ -193,6 +194,10 @@ body{
   p:hover{
     background: #efe6fb;
   }
+
+.fa-mobile-screen-button:active,.fa-list:active,.fa-store:active{
+  color: $primaire;
+}
 
 }
 
