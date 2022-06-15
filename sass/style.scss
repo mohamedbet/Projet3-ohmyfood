@@ -224,11 +224,11 @@ a{
     height: 450px;
     background: $color1;
     border-radius: 25px;
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0px 0px 15px $color2;
   }
 
   article:hover{
-    box-shadow: 0px 0px 25px black;
+    box-shadow: 0px 0px 25px $color2;
     border: 1px solid $color1;
    
   }
@@ -293,15 +293,9 @@ a{
 
 
 .i-article {
-  // display: -webkit-box;
-  // display: -ms-flexbox;
+
   display: flex;
-  // -webkit-box-pack: center;
-      // -ms-flex-pack: center;
-          // justify-content: center;
-  // -webkit-box-align: center;
-      // -ms-flex-align: center;
-          // align-items: center;
+
   margin-right: 3%;
   width: 40px;
 }

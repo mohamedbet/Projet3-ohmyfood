@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&family=Shrikhand&display=swap");
 body {
   margin: 0%;
@@ -25,45 +26,103 @@ header a img {
 
 .image img {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
 }
 
-.menu-header-heart {
+#menu {
+  background: rgb(235, 235, 235);
+  margin: 0% 5% 0% 5%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 700px;
+  margin-top: -5%;
+  position: relative;
+}
+#menu .menu-header-h2-heart {
   display: flex;
-  margin-right: 3%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+#menu h2 {
+  margin-left: 1%;
+}
+#menu .menu-header-heart {
+  display: flex;
+  margin-right: 1%;
   width: 40px;
 }
-
-.menu-header-heart .heart {
+#menu .menu-header-heart .heart {
   width: 40px;
   stroke-width: 30;
   stroke: black;
   fill: white;
   cursor: pointer;
 }
-
-.menu-header-heart .heart-full {
+#menu .menu-header-heart .heart-full {
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
 }
-
-.menu-header-heart .heart-empty {
+#menu .menu-header-heart .heart-empty {
   width: 60px;
   position: relative;
 }
-
-.menu-header-heart .heart-empty:hover {
+#menu .menu-header-heart .heart-empty:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
-.menu-carte {
+#menu .menu-carte {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+#menu .menu-carte .menu-entrées, #menu .menu-carte .menu-plats, #menu .menu-carte .menu-desserts {
+  width: 25%;
+}
+#menu .menu-carte h3 {
+  width: 21%;
+  border-bottom: 3px solid #99E2D0;
+}
+#menu .menu-carte .entrée-1, #menu .menu-carte .entrée-2, #menu .menu-carte .entrée-3, #menu .menu-carte .plat-1, #menu .menu-carte .plat-2, #menu .menu-carte .plat-3, #menu .menu-carte .dessert-1, #menu .menu-carte .dessert-2, #menu .menu-carte .dessert-3 {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 7%;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  color: black;
+  box-shadow: 0px 0px 10px rgb(192, 192, 192);
+}
+#menu .menu-carte .entrée-1 .h4-p, #menu .menu-carte .entrée-2 .h4-p, #menu .menu-carte .entrée-3 .h4-p, #menu .menu-carte .plat-1 .h4-p, #menu .menu-carte .plat-2 .h4-p, #menu .menu-carte .plat-3 .h4-p, #menu .menu-carte .dessert-1 .h4-p, #menu .menu-carte .dessert-2 .h4-p, #menu .menu-carte .dessert-3 .h4-p {
+  width: 75%;
+}
+#menu .menu-carte .entrée-1 .prix, #menu .menu-carte .entrée-2 .prix, #menu .menu-carte .entrée-3 .prix, #menu .menu-carte .plat-1 .prix, #menu .menu-carte .plat-2 .prix, #menu .menu-carte .plat-3 .prix, #menu .menu-carte .dessert-1 .prix, #menu .menu-carte .dessert-2 .prix, #menu .menu-carte .dessert-3 .prix {
+  width: 7%;
+  font-family: bold;
+}
+#menu .menu-carte .entrée-1:hover, #menu .menu-carte .entrée-2:hover, #menu .menu-carte .entrée-3:hover, #menu .menu-carte .plat-1:hover, #menu .menu-carte .plat-2:hover, #menu .menu-carte .plat-3:hover, #menu .menu-carte .dessert-1:hover, #menu .menu-carte .dessert-2:hover, #menu .menu-carte .dessert-3:hover {
+  box-shadow: 0px 0px 25px rgb(192, 192, 192);
+}
+#menu .menu-button .button {
+  width: 20%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  margin-left: 40%;
+  border-radius: 39px;
+  font-size: 150%;
+  color: white;
+  box-shadow: 0px 0px 6px grey;
+}
+#menu .button:hover {
+  box-shadow: 0px 0px 10px grey;
+  opacity: 90%;
 }
 
 footer {

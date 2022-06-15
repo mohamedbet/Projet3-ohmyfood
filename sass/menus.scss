@@ -47,23 +47,38 @@ body{
 
    img{
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
    }
 }
 
+#menu{
+  background: $color3;
+  margin: 0% 5% 0% 5%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 700px;
+  margin-top: -5%;
+  position: relative;
+
+
+
+.menu-header-h2-heart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+h2{
+  margin-left: 1%;
+}
 
 .menu-header-heart {
-    // display: -webkit-box;
-    // display: -ms-flexbox;
+
     display: flex;
-    // -webkit-box-pack: center;
-        // -ms-flex-pack: center;
-            // justify-content: center;
-    // -webkit-box-align: center;
-        // -ms-flex-align: center;
-            // align-items: center;
-    margin-right: 3%;
+
+    margin-right: 1%;
     width: 40px;
   }
   
@@ -96,7 +111,80 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    .menu-entrées,.menu-plats,.menu-desserts{
+      width: 25%;
+    }
+
+    h3{
+      width: 21%;
+      border-bottom: 3px solid $tertiaire;
+    }
+
+    .entrée-1,.entrée-2,.entrée-3,.plat-1,.plat-2,.plat-3,.dessert-1,.dessert-2,.dessert-3{
+      background-color: $color1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 7%;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      color: $color2;
+      box-shadow: 0px 0px 10px $color5;
+
+    
+
+      .h4-p{
+        width: 75%;
+      }
+
+      .prix{
+        width: 7%;
+        font-family: bold;
+      }
+
+      
+    }
+
+   
+    .entrée-1:hover,.entrée-2:hover,.entrée-3:hover,.plat-1:hover,.plat-2:hover,.plat-3:hover,.dessert-1:hover,.dessert-2:hover,.dessert-3:hover{
+      box-shadow: 0px 0px 25px $color5;
+    }
+
+   
   }
+
+  
+
+  .menu-button{
+   
+  
+    .button{
+       width: 20%;
+       height: 60px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+       margin-left: 40%;
+       border-radius: 39px;
+       font-size: 150%;
+       color: $color1;
+       box-shadow: 0px 0px 6px $color;
+   }
+   
+  }
+
+  .button:hover{
+    box-shadow: 0px 0px 10px $color;
+    opacity: 90%;
+  }
+
+  
+}
+
+
+
 
 
 
