@@ -15,13 +15,18 @@ header {
   height: 200px;
 }
 header .logo {
-  width: 35%;
+  width: 21%;
 }
 header .logo img {
-  width: 60%;
+  width: 100%;
 }
-header a img {
-  width: 20%;
+header a {
+  width: 5%;
+  height: 50px;
+}
+header a .fa-arrow-left {
+  font-size: 50px;
+  color: black;
 }
 
 .image img {
@@ -89,7 +94,7 @@ header a img {
 #menu .menu-carte .entrée-1, #menu .menu-carte .entrée-2, #menu .menu-carte .entrée-3, #menu .menu-carte .plat-1, #menu .menu-carte .plat-2, #menu .menu-carte .plat-3, #menu .menu-carte .dessert-1, #menu .menu-carte .dessert-2, #menu .menu-carte .dessert-3 {
   background-color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 7%;
   border: 1px solid transparent;
@@ -98,11 +103,56 @@ header a img {
   box-shadow: 0px 0px 10px rgb(192, 192, 192);
 }
 #menu .menu-carte .entrée-1 .h4-p, #menu .menu-carte .entrée-2 .h4-p, #menu .menu-carte .entrée-3 .h4-p, #menu .menu-carte .plat-1 .h4-p, #menu .menu-carte .plat-2 .h4-p, #menu .menu-carte .plat-3 .h4-p, #menu .menu-carte .dessert-1 .h4-p, #menu .menu-carte .dessert-2 .h4-p, #menu .menu-carte .dessert-3 .h4-p {
-  width: 75%;
+  width: 76%;
+}
+#menu .menu-carte .entrée-1 .h4-p h4, #menu .menu-carte .entrée-2 .h4-p h4, #menu .menu-carte .entrée-3 .h4-p h4, #menu .menu-carte .plat-1 .h4-p h4, #menu .menu-carte .plat-2 .h4-p h4, #menu .menu-carte .plat-3 .h4-p h4, #menu .menu-carte .dessert-1 .h4-p h4, #menu .menu-carte .dessert-2 .h4-p h4, #menu .menu-carte .dessert-3 .h4-p h4 {
+  margin-left: 3%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#menu .menu-carte .entrée-1 .h4-p p, #menu .menu-carte .entrée-2 .h4-p p, #menu .menu-carte .entrée-3 .h4-p p, #menu .menu-carte .plat-1 .h4-p p, #menu .menu-carte .plat-2 .h4-p p, #menu .menu-carte .plat-3 .h4-p p, #menu .menu-carte .dessert-1 .h4-p p, #menu .menu-carte .dessert-2 .h4-p p, #menu .menu-carte .dessert-3 .h4-p p {
+  margin-left: 3%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #menu .menu-carte .entrée-1 .prix, #menu .menu-carte .entrée-2 .prix, #menu .menu-carte .entrée-3 .prix, #menu .menu-carte .plat-1 .prix, #menu .menu-carte .plat-2 .prix, #menu .menu-carte .plat-3 .prix, #menu .menu-carte .dessert-1 .prix, #menu .menu-carte .dessert-2 .prix, #menu .menu-carte .dessert-3 .prix {
   width: 7%;
   font-family: bold;
+  margin-right: 3%;
+}
+#menu .menu-carte .entrée-1 .prix:hover, #menu .menu-carte .entrée-2 .prix:hover, #menu .menu-carte .entrée-3 .prix:hover, #menu .menu-carte .plat-1 .prix:hover, #menu .menu-carte .plat-2 .prix:hover, #menu .menu-carte .plat-3 .prix:hover, #menu .menu-carte .dessert-1 .prix:hover, #menu .menu-carte .dessert-2 .prix:hover, #menu .menu-carte .dessert-3 .prix:hover {
+  padding-right: 70px;
+  transition: 0.5s ease;
+  margin-left: 20%;
+}
+#menu .menu-carte .entrée-1 .box-rotative, #menu .menu-carte .entrée-2 .box-rotative, #menu .menu-carte .entrée-3 .box-rotative, #menu .menu-carte .plat-1 .box-rotative, #menu .menu-carte .plat-2 .box-rotative, #menu .menu-carte .plat-3 .box-rotative, #menu .menu-carte .dessert-1 .box-rotative, #menu .menu-carte .dessert-2 .box-rotative, #menu .menu-carte .dessert-3 .box-rotative {
+  width: 5%;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0;
+}
+#menu .menu-carte .entrée-1 .box-rotative:hover, #menu .menu-carte .entrée-2 .box-rotative:hover, #menu .menu-carte .entrée-3 .box-rotative:hover, #menu .menu-carte .plat-1 .box-rotative:hover, #menu .menu-carte .plat-2 .box-rotative:hover, #menu .menu-carte .plat-3 .box-rotative:hover, #menu .menu-carte .dessert-1 .box-rotative:hover, #menu .menu-carte .dessert-2 .box-rotative:hover, #menu .menu-carte .dessert-3 .box-rotative:hover {
+  animation: slide-left 0.5s ease;
+  transform-origin: right;
+  transform: rotate(180deg);
+  animation: rotate 0.5s both;
+}
+#menu .menu-carte .entrée-1 i, #menu .menu-carte .entrée-2 i, #menu .menu-carte .entrée-3 i, #menu .menu-carte .plat-1 i, #menu .menu-carte .plat-2 i, #menu .menu-carte .plat-3 i, #menu .menu-carte .dessert-1 i, #menu .menu-carte .dessert-2 i, #menu .menu-carte .dessert-3 i {
+  height: 100%;
+  width: 100%;
+  font-size: 40px;
+  color: white;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 15px 15px 0px;
+  transform: rotate(180deg);
+  animation: rotate 0.5s both;
 }
 #menu .menu-carte .entrée-1:hover, #menu .menu-carte .entrée-2:hover, #menu .menu-carte .entrée-3:hover, #menu .menu-carte .plat-1:hover, #menu .menu-carte .plat-2:hover, #menu .menu-carte .plat-3:hover, #menu .menu-carte .dessert-1:hover, #menu .menu-carte .dessert-2:hover, #menu .menu-carte .dessert-3:hover {
   box-shadow: 0px 0px 25px rgb(192, 192, 192);

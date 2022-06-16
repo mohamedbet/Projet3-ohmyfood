@@ -26,17 +26,20 @@ body{
     height: 200px;
 
   .logo {
-    width: 35%;
+    width: 21%;
     img{
-      width: 60%;
+      width: 100%;
     }
 
   }
 
   a{
+    width: 5%;
+    height: 50px;
 
-    img{
-    width: 20%;
+    .fa-arrow-left{
+      font-size: 50px;
+      color: $color2;
 }
 
   }
@@ -124,7 +127,7 @@ h2{
     .entrée-1,.entrée-2,.entrée-3,.plat-1,.plat-2,.plat-3,.dessert-1,.dessert-2,.dessert-3{
       background-color: $color1;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 7%;
       border: 1px solid transparent;
@@ -135,14 +138,72 @@ h2{
     
 
       .h4-p{
-        width: 75%;
+        width: 76%;
+        h4{
+          margin-left: 3%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        p{
+          margin-left: 3%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
       }
 
       .prix{
         width: 7%;
         font-family: bold;
+        margin-right: 3%;
       }
 
+      .prix:hover{
+        padding-right: 70px;
+        transition: 0.5s ease ;
+        margin-left: 20%;
+      }
+
+
+
+
+
+
+
+      .box-rotative{
+        width: 5%;
+        height: 100px;
+        display: flex;
+        position: absolute;
+        background: $tertiaire;
+        border-radius: 0 15px 15px 0;
+        right: 0;
+      }
+   
+
+      .box-rotative:hover{
+        animation: slide-left 0.5s ease ;
+        transform-origin: right;
+        transform: rotate(180deg);
+        animation: rotate 0.5s both;
+      }
+
+      i{
+        height: 100%;
+        width: 100%;
+        font-size: 40px;
+        color: $color1;
+        background-color: #99E2D0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+        transform: rotate(180deg);
+        animation: rotate 0.5s both;
+        }
+
+    
       
     }
 
@@ -154,7 +215,6 @@ h2{
    
   }
 
-  
 
   .menu-button{
    
