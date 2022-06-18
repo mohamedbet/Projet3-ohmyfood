@@ -36,141 +36,121 @@ header a .fa-arrow-left {
 }
 
 #menu {
-  background: rgb(235, 235, 235);
-  margin: 0% 5% 0% 5%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  height: 700px;
-  margin-top: -5%;
-  position: relative;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#menu .menu-header-h2-heart {
+#menu .menu {
+  width: 80%;
+  height: 117%;
+  margin-top: -5%;
+  background: rgb(235, 235, 235);
+  padding: 0 20px;
+  border-radius: 30px 30px 0px 0px;
+}
+#menu .menu .h2-heart {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
 }
-#menu h2 {
-  margin-left: 1%;
-}
-#menu .menu-header-heart {
+#menu .menu .h2-heart .i-heart {
   display: flex;
-  margin-right: 1%;
   width: 40px;
 }
-#menu .menu-header-heart .heart {
+#menu .menu .h2-heart .i-heart .heart {
   width: 40px;
   stroke-width: 30;
   stroke: black;
   fill: white;
   cursor: pointer;
 }
-#menu .menu-header-heart .heart-full {
+#menu .menu .h2-heart .i-heart .heart-full {
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
 }
-#menu .menu-header-heart .heart-empty {
+#menu .menu .h2-heart .i-heart .heart-empty {
   width: 60px;
   position: relative;
 }
-#menu .menu-header-heart .heart-empty:hover {
+#menu .menu .h2-heart .i-heart .heart-empty:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-#menu .menu-carte {
+#menu .menu .menu-carte {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  grid-gap: 100px;
 }
-#menu .menu-carte .menu-entrées, #menu .menu-carte .menu-plats, #menu .menu-carte .menu-desserts {
-  width: 25%;
+#menu .menu .menu-carte .menu-carte-entrée, #menu .menu .menu-carte .menu-carte-plat, #menu .menu .menu-carte .menu-carte-dessert {
+  width: 29%;
+  display: grid;
+  grid-gap: 15px;
 }
-#menu .menu-carte h3 {
-  width: 21%;
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-h3 h3, #menu .menu .menu-carte .menu-carte-plat .menu-carte-h3 h3, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-h3 h3 {
   border-bottom: 3px solid #99E2D0;
+  width: 12%;
 }
-#menu .menu-carte .entrée-1, #menu .menu-carte .entrée-2, #menu .menu-carte .entrée-3, #menu .menu-carte .plat-1, #menu .menu-carte .plat-2, #menu .menu-carte .plat-3, #menu .menu-carte .dessert-1, #menu .menu-carte .dessert-2, #menu .menu-carte .dessert-3 {
-  background-color: white;
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 7%;
-  border: 1px solid transparent;
-  border-radius: 16px;
-  color: black;
-  box-shadow: 0px 0px 10px rgb(192, 192, 192);
-}
-#menu .menu-carte .entrée-1 .h4-p, #menu .menu-carte .entrée-2 .h4-p, #menu .menu-carte .entrée-3 .h4-p, #menu .menu-carte .plat-1 .h4-p, #menu .menu-carte .plat-2 .h4-p, #menu .menu-carte .plat-3 .h4-p, #menu .menu-carte .dessert-1 .h4-p, #menu .menu-carte .dessert-2 .h4-p, #menu .menu-carte .dessert-3 .h4-p {
-  width: 76%;
-}
-#menu .menu-carte .entrée-1 .h4-p h4, #menu .menu-carte .entrée-2 .h4-p h4, #menu .menu-carte .entrée-3 .h4-p h4, #menu .menu-carte .plat-1 .h4-p h4, #menu .menu-carte .plat-2 .h4-p h4, #menu .menu-carte .plat-3 .h4-p h4, #menu .menu-carte .dessert-1 .h4-p h4, #menu .menu-carte .dessert-2 .h4-p h4, #menu .menu-carte .dessert-3 .h4-p h4 {
-  margin-left: 3%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-#menu .menu-carte .entrée-1 .h4-p p, #menu .menu-carte .entrée-2 .h4-p p, #menu .menu-carte .entrée-3 .h4-p p, #menu .menu-carte .plat-1 .h4-p p, #menu .menu-carte .plat-2 .h4-p p, #menu .menu-carte .plat-3 .h4-p p, #menu .menu-carte .dessert-1 .h4-p p, #menu .menu-carte .dessert-2 .h4-p p, #menu .menu-carte .dessert-3 .h4-p p {
-  margin-left: 3%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-#menu .menu-carte .entrée-1 .prix, #menu .menu-carte .entrée-2 .prix, #menu .menu-carte .entrée-3 .prix, #menu .menu-carte .plat-1 .prix, #menu .menu-carte .plat-2 .prix, #menu .menu-carte .plat-3 .prix, #menu .menu-carte .dessert-1 .prix, #menu .menu-carte .dessert-2 .prix, #menu .menu-carte .dessert-3 .prix {
-  width: 7%;
-  font-family: bold;
-  margin-right: 3%;
-}
-#menu .menu-carte .entrée-1 .prix:hover, #menu .menu-carte .entrée-2 .prix:hover, #menu .menu-carte .entrée-3 .prix:hover, #menu .menu-carte .plat-1 .prix:hover, #menu .menu-carte .plat-2 .prix:hover, #menu .menu-carte .plat-3 .prix:hover, #menu .menu-carte .dessert-1 .prix:hover, #menu .menu-carte .dessert-2 .prix:hover, #menu .menu-carte .dessert-3 .prix:hover {
-  padding-right: 70px;
-  transition: 0.5s ease;
-  margin-left: 20%;
-}
-#menu .menu-carte .entrée-1 .box-rotative, #menu .menu-carte .entrée-2 .box-rotative, #menu .menu-carte .entrée-3 .box-rotative, #menu .menu-carte .plat-1 .box-rotative, #menu .menu-carte .plat-2 .box-rotative, #menu .menu-carte .plat-3 .box-rotative, #menu .menu-carte .dessert-1 .box-rotative, #menu .menu-carte .dessert-2 .box-rotative, #menu .menu-carte .dessert-3 .box-rotative {
-  width: 5%;
-  height: 100px;
-  display: flex;
-  position: absolute;
-  background: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  right: 0;
-}
-#menu .menu-carte .entrée-1 .box-rotative:hover, #menu .menu-carte .entrée-2 .box-rotative:hover, #menu .menu-carte .entrée-3 .box-rotative:hover, #menu .menu-carte .plat-1 .box-rotative:hover, #menu .menu-carte .plat-2 .box-rotative:hover, #menu .menu-carte .plat-3 .box-rotative:hover, #menu .menu-carte .dessert-1 .box-rotative:hover, #menu .menu-carte .dessert-2 .box-rotative:hover, #menu .menu-carte .dessert-3 .box-rotative:hover {
-  animation: slide-left 0.5s ease;
-  transform-origin: right;
-  transform: rotate(180deg);
-  animation: rotate 0.5s both;
-}
-#menu .menu-carte .entrée-1 i, #menu .menu-carte .entrée-2 i, #menu .menu-carte .entrée-3 i, #menu .menu-carte .plat-1 i, #menu .menu-carte .plat-2 i, #menu .menu-carte .plat-3 i, #menu .menu-carte .dessert-1 i, #menu .menu-carte .dessert-2 i, #menu .menu-carte .dessert-3 i {
-  height: 100%;
   width: 100%;
-  font-size: 40px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p {
+  margin-left: 5%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-h4 h4, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-h4 h4, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-h4 h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-p p, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-p p, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-p p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix .menu-case-prix, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix .menu-case-prix, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix .menu-case-prix {
+  padding-right: 20px;
+  font-weight: bold;
+  padding-left: 7px;
+}
+#menu .menu .menu-case-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu .menu .menu-case-button .menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   color: white;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px 15px 15px 0px;
-  transform: rotate(180deg);
-  animation: rotate 0.5s both;
-}
-#menu .menu-carte .entrée-1:hover, #menu .menu-carte .entrée-2:hover, #menu .menu-carte .entrée-3:hover, #menu .menu-carte .plat-1:hover, #menu .menu-carte .plat-2:hover, #menu .menu-carte .plat-3:hover, #menu .menu-carte .dessert-1:hover, #menu .menu-carte .dessert-2:hover, #menu .menu-carte .dessert-3:hover {
-  box-shadow: 0px 0px 25px rgb(192, 192, 192);
-}
-#menu .menu-button .button {
-  width: 20%;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 15%;
+  height: 50px;
+  margin-top: 4%;
+  font-size: 100%;
+  border-radius: 24px;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  margin-left: 40%;
-  border-radius: 39px;
-  font-size: 150%;
-  color: white;
   box-shadow: 0px 0px 6px grey;
 }
-#menu .button:hover {
+#menu .menu .menu-case-button .menu-button:hover {
   box-shadow: 0px 0px 10px grey;
   opacity: 90%;
 }
