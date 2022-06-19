@@ -105,10 +105,35 @@ header a .fa-arrow-left {
   background-color: white;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case:hover .box-rotative, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case:hover .box-rotative, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case:hover .box-rotative {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-left 0.5s ease;
+  transform-origin: right;
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case:hover .menu-case-prix, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case:hover .menu-case-prix, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case:hover .menu-case-prix {
+  margin-right: 70px;
+  transition: 0.5s ease;
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .box-rotative, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .box-rotative, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .box-rotative {
+  display: none;
+  position: absolute;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 13px;
+  height: 100%;
+  width: 50px;
+}
+#menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .box-rotative i, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .box-rotative i, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .box-rotative i {
+  font-size: 40px;
+  color: white;
+  transform: rotate(180deg);
+  animation: rotate 0.5s both;
+}
 #menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,14 +146,15 @@ header a .fa-arrow-left {
 #menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-h4 h4, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-h4 h4, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-h4 h4 {
   text-overflow: ellipsis;
   overflow: hidden;
+  text-transform: uppercase;
 }
 #menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-p p, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-p p, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix .menu-case-h4-p .menu-case-p p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
 #menu .menu .menu-carte .menu-carte-entrée .menu-carte-case .menu-case-h4-p-prix .menu-case-prix, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case .menu-case-h4-p-prix .menu-case-prix, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case .menu-case-h4-p-prix .menu-case-prix {
-  padding-right: 20px;
   font-weight: bold;
+  padding-right: 20px;
   padding-left: 7px;
 }
 #menu .menu .menu-case-button {
@@ -153,6 +179,70 @@ header a .fa-arrow-left {
 #menu .menu .menu-case-button .menu-button:hover {
   box-shadow: 0px 0px 10px grey;
   opacity: 90%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-50px);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-carte-case {
+  animation: opacity 1s both;
+}
+
+#case-1 {
+  animation-delay: 0.1s;
+}
+
+#case-2 {
+  animation-delay: 0.2s;
+}
+
+#case-3 {
+  animation-delay: 0.3s;
+}
+
+#case-4 {
+  animation-delay: 0.4s;
+}
+
+#case-5 {
+  animation-delay: 0.5s;
+}
+
+#case-6 {
+  animation-delay: 0.6s;
+}
+
+#case-7 {
+  animation-delay: 0.7s;
+}
+
+#case-8 {
+  animation-delay: 0.8s;
+}
+
+#case-9 {
+  animation-delay: 0.9s;
 }
 
 footer {
