@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&family=Shrikhand&display=swap");
 body {
   margin: 0%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body a {
   text-decoration: none;
@@ -23,10 +23,10 @@ body a {
 .input-nav {
   display: flex;
   justify-content: center;
-  background: rgb(235, 235, 235);
+  background: #e6e5e5;
   font-size: 150%;
   height: 80px;
-  box-shadow: inset 0px 0px 0px 0px rgb(235, 235, 235), inset 0px 2px 4px 0px #888, inset 0px 0px 0px 0px rgb(235, 235, 235), inset 0px 0px 0px 0px rgb(235, 235, 235);
+  box-shadow: inset 0px 0px 0px 0px #F6F6F6, inset 0px 2px 4px 0px #888, inset 0px 0px 0px 0px #F6F6F6, inset 0px 0px 0px 0px #F6F6F6;
 }
 .input-nav i {
   display: flex;
@@ -45,7 +45,7 @@ body a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(247, 247, 247);
+  background: #F6F6F6;
   height: 400px;
   font-size: 150%;
 }
@@ -108,12 +108,12 @@ body a {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  background: rgb(247, 247, 247);
+  background: #F6F6F6;
   box-shadow: 0px 0px 10px rgb(192, 192, 192);
 }
 .section2 .btn-1:hover, .section2 .btn-2:hover, .section2 .btn-3:hover {
   background: #efe6fb;
-  box-shadow: 0px 0px 24px rgb(192, 192, 192);
+  box-shadow: 0px 0px 24px #F6F6F6;
 }
 .section2 .i-1, .section2 .i-2, .section2 .i-3 {
   width: 16%;
@@ -163,7 +163,7 @@ body a {
 
 .section3 {
   height: 1350px;
-  background: rgb(247, 247, 247);
+  background: #e6e5e5;
   margin-top: 5%;
   font-size: 120%;
 }

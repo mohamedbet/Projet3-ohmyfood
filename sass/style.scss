@@ -6,8 +6,8 @@ $tertiaire:#99E2D0;
 $color:grey;
 $color1:white;
 $color2:black;
-$color3:rgb(235, 235, 235);
-$color4:rgb(247 247 247);
+$color3:#F6F6F6;
+$color4:#e6e5e5;
 $color5:rgb(192 192 192);
 $color6:rgb(61, 59, 59);
 
@@ -15,7 +15,7 @@ $color6:rgb(61, 59, 59);
 
 body{
   margin: 0%;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
   a{
     text-decoration: none;
   }
@@ -38,7 +38,7 @@ body{
 .input-nav {
   display: flex;
   justify-content: center;
-  background: $color3;
+  background: $color4;
   font-size: 150%;
   height: 80px;
   box-shadow: inset 0px 0px 0px 0px $color3, inset 0px 2px 4px 0px #888, inset 0px 0px 0px 0px $color3, inset 0px 0px 0px 0px $color3;
@@ -62,7 +62,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: $color4;
+  background: $color3;
   height: 400px;
   font-size: 150%;
 
@@ -134,13 +134,13 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background: $color4;
+    background: $color3;
     box-shadow: 0px 0px 10px $color5;
   }
 
   .btn-1:hover,.btn-2:hover,.btn-3:hover{
     background: #efe6fb;
-    box-shadow: 0px 0px 24px $color5;
+    box-shadow: 0px 0px 24px $color3;
   }
 
   .i-1,.i-2,.i-3{
