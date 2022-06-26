@@ -10,6 +10,13 @@ $color3:#F6F6F6;
 $color4:rgb(247 247 247);
 $color5:rgb(192 192 192);
 $color6:rgb(61, 59, 59);
+$gradient:linear-gradient(to bottom ,$secondaire,$primaire);
+
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 body{
     margin: 0%;
@@ -20,9 +27,7 @@ body{
   }
 
   header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   @include flexbox-center;
     height: 200px;
 
   .logo {
@@ -57,10 +62,7 @@ body{
 
 #menu{
   width: 100%;
-  // height: 550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox-center;
 
   .menu{
    width: 100%;
@@ -102,7 +104,6 @@ body{
 
  .heart-empty:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -143,9 +144,7 @@ body{
      box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
     
      &:hover .box-rotative {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexbox-center;
       animation: slide-left 0.5s ease ;
       transform-origin: right;
   }
@@ -217,15 +216,11 @@ body{
 }
 
 .menu-case-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox-center;
   margin-bottom: 3%;
 
   .menu-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox-center;
     cursor: pointer;
     color: $color1;
     width: 15%;
@@ -233,7 +228,7 @@ body{
     margin-top: 4%;
     font-size: 100%;
     border-radius: 24px;
-    background-image: linear-gradient(to bottom ,$secondaire,$primaire);
+    background-image: $gradient;
     box-shadow: 0px 0px 6px $color;
     &:hover{
       box-shadow: 0px 0px 10px $color;

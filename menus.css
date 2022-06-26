@@ -78,7 +78,6 @@ header a .fa-arrow-left {
 }
 #menu .menu .h2-heart .i-heart .heart-empty:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 #menu .menu .menu-carte {
