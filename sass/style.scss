@@ -1,22 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&family=Shrikhand&display=swap');
+@import"libs/variables.scss";
+@import"libs/mixins.scss";
 
-$primaire:#9356DC;
-$secondaire:#FF79DA;
-$tertiaire:#99E2D0;
-$color:grey;
-$color1:white;
-$color2:black;
-$color3:#F6F6F6;
-$color4:#e6e5e5;
-$color5:rgb(192 192 192);
-$color6:rgb(61, 59, 59);
-$gradient:linear-gradient(to bottom ,$secondaire,$primaire);
-
-@mixin flexbox-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 body{
   margin: 0%;
@@ -28,34 +13,13 @@ body{
 }
 
 .spinner {
-  height: 100%;
-  background: white;
-  margin: auto;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 20;
-  animation: spinner 2s linear ;
-  visibility: hidden;
+ @include spinner;
   &-border {
     @include flexbox-center;
-      border: 10px solid transparent;
-      border-top: 10px solid $primaire;
-      border-bottom: 10px solid $secondaire;
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      margin: auto;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      animation: spinner-border 2s linear ;
-      z-index: 10;
-      visibility: hidden;
+     @include spinner-border;
   }
   &-center {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: $tertiaire;
+     @include spinner-center;
   
   }
  
@@ -85,7 +49,6 @@ body{
   opacity: 1;
 }
 100% {
-  -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
   opacity: 0;
   visibility: hidden;
@@ -108,10 +71,7 @@ body{
 
 .input-nav {
   @include flexbox-center;
-  background: $color4;
-  font-size: 150%;
-  height: 80px;
-  box-shadow: inset 0px 0px 0px 0px $color3, inset 0px 2px 4px 0px #888, inset 0px 0px 0px 0px $color3, inset 0px 0px 0px 0px $color3;
+  @include input-nav;
 
   i {
     @include flexbox-center;
@@ -135,16 +95,7 @@ body{
   }
 
   .button{
-    cursor: pointer;
-    color: $color1;
-    width: 22%;
-    height: 18%;
-    margin-top: 2%;
-    font-size: 90%;
-    border-radius: 24px;
-    border: none;
-    background-image: $gradient;
-    box-shadow: 0px 0px 6px $color;
+    @include button;
     &:hover{
       box-shadow: 0px 0px 10px $color;
       opacity: 90%;
@@ -173,8 +124,7 @@ body{
   }
 
   .btn-section2{
-    display: flex;
-    justify-content: space-around;
+    @include flexbox-around;
     width: 100%;
     height: 100px;
     margin-top: 1%;
@@ -183,13 +133,7 @@ body{
 
 
   .btn-1,.btn-2,.btn-3{
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    @include flexbox-center;
-    border-radius: 20px;
-    background: $color3;
-    box-shadow: 0px 0px 10px $color5;
+   @include btn;
     &:hover{
       background: #efe6fb;
       box-shadow: 0px 0px 24px $color5;
@@ -203,27 +147,19 @@ body{
 
 
   .fa-1,.fa-2,.fa-3{
-    background: $primaire;
-    color: $color1;
-    border-radius: 100%;
+    @include fa;
     @include flexbox-center;
   }
 
   .fa-1{
-    width: 85%;
-    height: 30px;
     margin-left: -43%;
   }
 
   .fa-2{
-    width: 85%;
-    height: 30px;
     margin-left: -42%;
   }
 
   .fa-3{
-    width: 85%;
-    height: 30px;
     margin-left: -41%;
   }
 
@@ -266,11 +202,7 @@ a{
 }
 
   article {
-    width: 100%;
-    height: 450px;
-    background: $color1;
-    border-radius: 25px;
-    box-shadow: 0px 0px 15px $color2;
+    @include article;
     &:hover{
       box-shadow: 0px 0px 25px $color2;
       border: 1px solid $color1;
@@ -288,12 +220,7 @@ a{
 
     .p-new{
       @include flexbox-center;
-      position: absolute;
-      background: $tertiaire;
-      width: 9%;
-      margin-top: 1%;
-      margin-left: 30%;
-      font-family: none;
+      @include p-new;
   
       p{
         @include flexbox-center;
@@ -306,17 +233,11 @@ a{
   }
 
   img {
-    width: 100%;
-    height: 80%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    object-fit: cover;
+   @include img;
   }
 
   .div-article{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox-between;
   }
 
   .h4-p-article{
@@ -343,22 +264,15 @@ a{
 }
 
 .i-article .heart {
-  width: 40px;
-  stroke-width: 30;
-  stroke: $color2;
-  fill: $color1;
-  cursor: pointer;
+  @include heart;
 }
 
 .i-article .heart-full {
-  position: absolute;
-  fill: url(#text-fill);
-  stroke: none;
+ @include heart-full;
 }
 
 .i-article .heart-empty {
-  width: 60px;
-  position: relative;
+ @include heart-empty;
   &:hover {
     opacity: 0;
     transition: 0.5s;
@@ -368,28 +282,21 @@ a{
 }
 
 .section3-1, .section3-2 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @include flexbox-around;
   margin-top: 5%;
 }
 
 footer {
-  background-color: $color6;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5% 0% 5% 0%;
+  @include flexbox-around;
+  @include footer;
 }
 
 .logo-footer {
-  font-family: 'Shrikhand', cursive;
-  font-size: 250%;
+ @include logo-footer;
 }
 
 footer p {
-  color: $color1;
-  font-size: 140%;
+  @include p-footer;
 }
 
 

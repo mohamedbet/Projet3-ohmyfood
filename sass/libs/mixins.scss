@@ -1,0 +1,216 @@
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin flexbox-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @mixin flexbox-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @mixin spinner {
+    height: 100%;
+    background: white;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    animation: spinner 3s linear ;
+    visibility: hidden;
+  }
+
+  @mixin spinner-border {
+    border: 10px solid transparent;
+    border-top: 10px solid $primaire;
+    border-bottom: 10px solid $secondaire;
+    border-right: 10px solid $tertiaire;
+    border-left: 10px solid $tertiaire;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    animation: spinner-border 3s linear ;
+    visibility: hidden;
+  }
+
+  @mixin spinner-center {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $tertiaire;
+  }
+
+  @mixin input-nav {
+    background: $color4;
+    font-size: 150%;
+    height: 80px;
+    box-shadow: inset 0px 0px 0px 0px $color3, inset 0px 2px 4px 0px #888, inset 0px 0px 0px 0px $color3, inset 0px 0px 0px 0px $color3;
+  }
+
+  @mixin button {
+    cursor: pointer;
+    color: $color1;
+    width: 22%;
+    height: 18%;
+    margin-top: 2%;
+    font-size: 90%;
+    border-radius: 24px;
+    border: none;
+    background-image: $gradient;
+    box-shadow: 0px 0px 6px $color;
+  }
+
+  @mixin btn {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    @include flexbox-center;
+    border-radius: 20px;
+    background: $color3;
+    box-shadow: 0px 0px 10px $color5;
+  }
+
+  @mixin fa {
+    background: $primaire;
+    color: $color1;
+    border-radius: 100%;
+    width: 85%;
+    height: 30px;
+  }
+
+  @mixin article {
+    width: 100%;
+    height: 450px;
+    background: $color1;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px $color2;
+  }
+
+  @mixin p-new {
+    position: absolute;
+    background: $tertiaire;
+    width: 9%;
+    margin-top: 1%;
+    margin-left: 30%;
+    font-family: none;
+  }
+
+  @mixin img {
+    width: 100%;
+    height: 80%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
+  }
+
+  @mixin img-menu {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  @mixin heart {
+    width: 40px;
+    stroke-width: 30;
+    stroke: $color2;
+    fill: $color1;
+    cursor: pointer;
+  }
+
+  @mixin heart-full {
+    position: absolute;
+    fill: url(#text-fill);
+    stroke: none;
+  }
+
+  @mixin heart-empty {
+    width: 60px;
+    position: relative;
+  }
+
+  @mixin menu {
+    width: 100%;
+    max-width: 80%;
+    height: 117%;
+    margin-top: -5%;
+    background: #F6F6F6;
+    padding: 20px 20px;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  @mixin i-heart-menu {
+    display: flex;
+    width: 40px;
+  }
+
+  @mixin heart-menu {
+    width: 40px;
+    stroke-width: 30;
+    stroke: $color2;
+    fill: $color1;
+    cursor: pointer;
+  }
+
+  @mixin carte-case {
+    position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
+  } 
+
+  @mixin box-rotative {
+    display: none;
+    position: absolute;
+    background: $tertiaire;
+    border-radius: 0 15px 15px 0;
+    right: 0px;
+    padding: 0 13px;
+    height: 100%;
+    width: 50px;
+  }
+
+  @mixin i-box-rotative{
+    font-size: 40px;
+    color: white;
+    transform: rotate(180deg);
+    animation: rotate 0.5s both;
+  }
+
+  @mixin button-menu {
+    cursor: pointer;
+    color: $color1;
+    width: 15%;
+    height: 50px;
+    margin-top: 4%;
+    font-size: 100%;
+    border-radius: 24px;
+    background-image: $gradient;
+    box-shadow: 0px 0px 6px $color;
+  }
+
+  @mixin footer {
+    background-color: $color6;
+    padding: 5% 0% 5% 0%;
+  }
+
+  @mixin logo-footer {
+    font-family: 'Shrikhand', cursive;
+    font-size: 250%;
+  }
+
+  @mixin p-footer {
+    color: $color1;
+    font-size: 140%;
+  }

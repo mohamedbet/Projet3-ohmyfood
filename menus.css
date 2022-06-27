@@ -95,12 +95,12 @@ header a .fa-arrow-left {
   font-weight: lighter;
 }
 #menu .menu .menu-carte .menu-carte-entrée .menu-carte-case, #menu .menu .menu-carte .menu-carte-plat .menu-carte-case, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-case {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
   width: 100%;
   border-radius: 15px;
   background-color: white;
@@ -196,7 +196,7 @@ header a .fa-arrow-left {
     transform: scaleX(0);
   }
   100% {
-    transform: scaleX(-50px);
+    transform: scaleX(-50);
   }
 }
 @keyframes opacity {
@@ -248,10 +248,10 @@ header a .fa-arrow-left {
 }
 
 footer {
-  background-color: rgb(61, 59, 59);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(61, 59, 59);
   padding: 5% 0% 5% 0%;
 }
 

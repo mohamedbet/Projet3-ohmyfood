@@ -1,22 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&family=Shrikhand&display=swap');
+@import"libs/variables.scss";
+@import"libs/mixins.scss";
 
-$primaire:#9356DC;
-$secondaire:#FF79DA;
-$tertiaire:#99E2D0;
-$color:grey;
-$color1:white;
-$color2:black;
-$color3:#F6F6F6;
-$color4:rgb(247 247 247);
-$color5:rgb(192 192 192);
-$color6:rgb(61, 59, 59);
-$gradient:linear-gradient(to bottom ,$secondaire,$primaire);
-
-@mixin flexbox-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 body{
     margin: 0%;
@@ -54,9 +39,7 @@ body{
 .image{
 
    img{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+   @include img-menu;
    }
 }
 
@@ -65,41 +48,25 @@ body{
   @include flexbox-center;
 
   .menu{
-   width: 100%;
-   max-width: 80%;
-   height: 117%;
-   margin-top: -5%;
-   background: #F6F6F6;
-   padding: 20px 20px;
-   border-radius: 50px 50px 0px 0px;
+  @include menu;
 
   .h2-heart{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @include flexbox-between;
     font-family: 'Shrikhand', cursive;
 
 .i-heart {
-  display: flex;
-  width: 40px;
+ @include i-heart-menu;
 
  .heart {
-  width: 40px;
-  stroke-width: 30;
-  stroke: $color2;
-  fill: $color1;
-  cursor: pointer;
+  @include heart-menu;
 }
 
  .heart-full {
-  position: absolute;
-  fill: url(#text-fill);
-  stroke: none;
+  @include heart-full;
 }
 
 .heart-empty {
-  width: 60px;
-  position: relative;
+  @include heart-empty;
 }
 
  .heart-empty:hover {
@@ -132,16 +99,8 @@ body{
     }
 
     .menu-carte-case{
-     position: relative;
-     cursor: pointer;
-     overflow: hidden;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     width: 100%;
-     border-radius: 15px;
-     background-color: white;
-     box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
+      @include flexbox-between;
+      @include carte-case;
     
      &:hover .box-rotative {
       @include flexbox-center;
@@ -155,19 +114,9 @@ body{
   }
 
   .box-rotative {
-      display: none;
-      position: absolute;
-      background: $tertiaire;
-      border-radius: 0 15px 15px 0;
-      right: 0px;
-      padding: 0 13px;
-      height: 100%;
-      width: 50px;
+    @include box-rotative;
       i {
-          font-size: 40px;
-          color: white;
-          transform: rotate(180deg);
-          animation: rotate 0.5s both;
+          @include i-box-rotative;
       }
   }
 
@@ -175,9 +124,7 @@ body{
 
      .menu-case-h4-p-prix{
       width: 100%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+     @include flexbox-between;
      
         
      .menu-case-h4-p{
@@ -189,7 +136,6 @@ body{
         h4{
           text-overflow: ellipsis;
           overflow: hidden;
-          // text-transform: uppercase;
       }
       
       }
@@ -221,15 +167,7 @@ body{
 
   .menu-button{
     @include flexbox-center;
-    cursor: pointer;
-    color: $color1;
-    width: 15%;
-    height: 50px;
-    margin-top: 4%;
-    font-size: 100%;
-    border-radius: 24px;
-    background-image: $gradient;
-    box-shadow: 0px 0px 6px $color;
+    @include button-menu;
     &:hover{
       box-shadow: 0px 0px 10px $color;
       opacity: 90%;
@@ -256,7 +194,7 @@ body{
             transform: scaleX(0);
   }
   100% {
-            transform: scaleX(-50px);
+            transform: scaleX(-50);
   }
 }
 
@@ -310,21 +248,16 @@ body{
 }
 
 footer {
-    background-color: $color6;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5% 0% 5% 0%;
+    @include flexbox-around;
+    @include footer;
   }
   
   .logo-footer {
-    font-family: 'Shrikhand', cursive;
-    font-size: 250%;
+    @include logo-footer;
   }
   
   footer p {
-    color: $color1;
-    font-size: 140%;
+   @include p-footer;
   }
 
 
