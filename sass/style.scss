@@ -3,6 +3,7 @@
 @import"libs/mixins.scss";
 
 
+/*body*/
 body{
   margin: 0%;
   font-family: 'Roboto', sans-serif;
@@ -12,6 +13,7 @@ body{
   }
 }
 
+/*animation spinner chargement*/
 .spinner {
  @include spinner;
   &-border {
@@ -24,8 +26,6 @@ body{
   }
  
   @keyframes spinner {
-    
- 
   0% {
     visibility: visible;
     opacity: 0.9;
@@ -40,7 +40,6 @@ body{
 }
 
 @keyframes spinner-border {
-  
 0% {
   visibility: visible;
   opacity: 1;
@@ -53,7 +52,6 @@ body{
   opacity: 0;
   visibility: hidden;
 }
-
 }
 
 }

@@ -2,7 +2,7 @@
 @import"libs/variables.scss";
 @import"libs/mixins.scss";
 
-
+/*body*/
 body{
     margin: 0%;
     font-family: 'Roboto', sans-serif;
@@ -11,10 +11,12 @@ body{
     }
   }
 
+  /*header*/
   header{
    @include flexbox-center;
     height: 200px;
 
+    /*logo et flèche*/
   .logo {
     width: 21%;
     img{
@@ -36,6 +38,9 @@ body{
 
 }
 
+/*main*/
+
+/*image*/
 .image{
 
    img{
@@ -43,6 +48,7 @@ body{
    }
 }
 
+/*menu*/
 #menu{
   width: 100%;
   @include flexbox-center;
@@ -50,6 +56,7 @@ body{
   .menu{
   @include menu;
 
+  /*titre et coeur*/
   .h2-heart{
   @include flexbox-between;
     font-family: 'Shrikhand', cursive;
@@ -80,6 +87,7 @@ body{
 
 }
 
+/*carte*/
 .menu-carte{
   display: flex;
   grid-gap: 100px;
@@ -98,6 +106,7 @@ body{
       }
     }
 
+/*css des éléments case pour animation complète*/
     .menu-carte-case{
       @include flexbox-between;
       @include carte-case;
@@ -161,6 +170,24 @@ body{
   }
 }
 
+/*animation rotate*/
+@keyframes rotate {
+  0% {
+      transform: rotate(0);
+}
+100% {
+      transform: rotate(360deg);
+  }
+}
+
+/*animation glissement*/
+@keyframes slide-left {
+  0% {
+            transform: scaleX(0);
+  }
+}
+
+/*button*/
 .menu-case-button{
   @include flexbox-center;
   margin-bottom: 3%;
@@ -180,30 +207,8 @@ body{
 
 }
 
-@keyframes rotate {
-  0% {
-      transform: rotate(0);
-}
-100% {
-      transform: rotate(360deg);
-  }
-}
 
-@keyframes slide-left {
-  0% {
-            transform: scaleX(0);
-  }
-}
-
-@keyframes opacity {
-  0% {
-            opacity: 0;
-  }
-  100% {
-            opacity: 1;
-  }
-}
-
+/*animation opacity carte menu*/
 .menu-carte-case {
     animation: opacity 1s both;
 }
@@ -244,6 +249,17 @@ body{
   animation-delay: 0.9s;
 }
 
+/*animation opacity*/
+@keyframes opacity {
+  0% {
+            opacity: 0;
+  }
+  100% {
+            opacity: 1;
+  }
+}
+
+/*footer*/
 footer {
     @include flexbox-around;
     @include footer;

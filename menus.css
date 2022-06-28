@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&family=Shrikhand&display=swap");
+/*body*/
 body {
   margin: 0%;
   font-family: "Roboto", sans-serif;
@@ -8,11 +9,13 @@ body a {
   text-decoration: none;
 }
 
+/*header*/
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
+  /*logo et flèche*/
 }
 header .logo {
   width: 21%;
@@ -29,12 +32,15 @@ header a .fa-arrow-left {
   color: black;
 }
 
+/*main*/
+/*image*/
 .image img {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
+/*menu*/
 #menu {
   width: 100%;
   display: flex;
@@ -49,6 +55,11 @@ header a .fa-arrow-left {
   background: #F6F6F6;
   padding: 20px 20px;
   border-radius: 50px 50px 0px 0px;
+  /*titre et coeur*/
+  /*carte*/
+  /*animation rotate*/
+  /*animation glissement*/
+  /*button*/
 }
 #menu .menu .h2-heart {
   display: flex;
@@ -88,6 +99,7 @@ header a .fa-arrow-left {
   width: 29%;
   display: grid;
   grid-gap: 15px;
+  /*css des éléments case pour animation complète*/
 }
 #menu .menu .menu-carte .menu-carte-entrée .menu-carte-h3 h3, #menu .menu .menu-carte .menu-carte-plat .menu-carte-h3 h3, #menu .menu .menu-carte .menu-carte-dessert .menu-carte-h3 h3 {
   border-bottom: 3px solid #99E2D0;
@@ -158,6 +170,19 @@ header a .fa-arrow-left {
   padding-right: 20px;
   padding-left: 7px;
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+}
 #menu .menu .menu-case-button {
   display: flex;
   justify-content: center;
@@ -183,27 +208,7 @@ header a .fa-arrow-left {
   opacity: 90%;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: scaleX(0);
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/*animation opacity carte menu*/
 .menu-carte-case {
   animation: opacity 1s both;
 }
@@ -244,6 +249,16 @@ header a .fa-arrow-left {
   animation-delay: 0.9s;
 }
 
+/*animation opacity*/
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*footer*/
 footer {
   display: flex;
   justify-content: space-around;

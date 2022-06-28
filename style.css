@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&family=Shrikhand&display=swap");
+/*body*/
 body {
   margin: 0%;
   font-family: "Roboto", sans-serif;
@@ -8,6 +9,7 @@ body a {
   text-decoration: none;
 }
 
+/*animation spinner chargement*/
 .spinner {
   height: 100%;
   background: white;
