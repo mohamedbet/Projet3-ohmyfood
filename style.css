@@ -1,5 +1,17 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&family=Shrikhand&display=swap");
+/*flexbox*/
+/*styles.scss*/
+/*body*/
+/*spinner*/
+/*header*/
+/*main*/
+/*section1*/
+/*section2*/
+/*section3*/
+/*menus.scss*/
+/*main*/
+/*footer*/
 /*body*/
 body {
   margin: 0%;
@@ -77,6 +89,7 @@ body a {
   }
 }
 
+/*header*/
 .logo {
   display: flex;
   justify-content: center;
@@ -110,6 +123,8 @@ body a {
   align-items: center;
 }
 
+/*main*/
+/*section1*/
 .section1 {
   display: flex;
   justify-content: center;
@@ -144,6 +159,7 @@ body a {
   align-items: center;
 }
 
+/*section2*/
 .section2 {
   display: flex;
   justify-content: center;
@@ -222,11 +238,13 @@ body a {
   color: black;
 }
 
+/*section3*/
 .section3 {
   height: 1350px;
   background: #F6F6F6;
   margin-top: 5%;
   font-size: 120%;
+  /*animation coeur*/
 }
 .section3 h3 {
   font-size: 200%;
@@ -332,6 +350,7 @@ body a {
   margin-top: 5%;
 }
 
+/*footer*/
 footer {
   display: flex;
   justify-content: space-around;
